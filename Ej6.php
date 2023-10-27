@@ -19,11 +19,20 @@
         }
         $i++;
     }
-    echo " Nota alta: $notaAlta, posición: $posAlta. Nota baja: $notaBaja, posición: $posBaja";
-    array_slice($arr,0,1);
-    array_splice($arr,9,1);
+    echo " Nota alta: $notaAlta, posición: $posAlta. Nota baja: $notaBaja, posición: $posBaja <br>";
+    array_shift($arr);
+    array_pop($arr);
     print_r($arr);
+    echo "<br>";
     
+    $contador=0;
+    while($contador<count($arr)){
+        $suma+=$arr[$contador];
+        $contador++;
+    }
+    $media=$suma/count($arr);
+    echo"La media será: $media ";
+
     
 
 ?>
